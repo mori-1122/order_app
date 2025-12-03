@@ -7,6 +7,3 @@ class CreateOrders < ActiveRecord::Migration[7.0]
     end
   end
 end
-
-
-# 7. migrationとmodelのファイルを作る 6.50
