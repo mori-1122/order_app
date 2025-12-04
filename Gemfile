@@ -77,6 +77,7 @@ group :development do
 
   # 以下、コースで追加したgem ここから
   # APコンテナ内でRubyの実行と非同期処理実行プロセスを束ねて起動させるために使用
+  gem 'erb_lint', '~> 0.9.0'
   gem 'foreman'
   # 以下、コースで追加したgem ここまで
 
