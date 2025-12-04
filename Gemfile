@@ -26,18 +26,14 @@ gem 'turbo-rails'
 gem 'stimulus-rails'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem 'jbuilder'
-
-# 以下、コースで追加したgem ここから
-# デコレーター
 gem 'active_decorator'
+gem 'jbuilder'
 
 # 多言語対応
 gem 'rails-i18n', '~> 7.0.0'
 
 # 非同期処理
 gem 'sidekiq'
-# 以下、コースで追加したgem ここまで
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
@@ -63,38 +59,22 @@ gem 'bootsnap', require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
-
-  # 以下、コースで追加したgem ここから
-  # ソースコードの静的コード解析 bundle exec rubocopでチェックできます。
   gem 'rubocop', require: false
   gem 'rubocop-performance'
-  # 以下、コースで追加したgem ここまで
 end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
-  gem 'web-console'
-
-  # 以下、コースで追加したgem ここから
-  # APコンテナ内でRubyの実行と非同期処理実行プロセスを束ねて起動させるために使用
+  gem 'erb_lint', '~> 0.9.0'
   gem 'foreman'
-  # 以下、コースで追加したgem ここまで
-
-  # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
-  # gem "rack-mini-profiler"
-
-  # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  # gem "spring"
+  gem 'web-console'
 end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
-  # 以下、コースで追加したgem ここから
-  # テストデータ制御用のクラスを作る
   gem 'factory_bot_rails'
 
   # rspec
   gem 'rspec-rails'
-  # 以下、コースで追加したgem ここまで
 end
